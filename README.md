@@ -23,10 +23,19 @@ doc-orchestrator/
 
 ## Instalación
 
+El destino depende de cómo querés usar la skill:
+
 ```powershell
-# Copiar todo a ~/.mavis/skills/
+# Opción 1: global — disponible para todos tus proyectos
+# (la convención de Mavis — el daemon busca skills aquí)
 Copy-Item -Recurse doc-orchestrator C:\Users\<tu-user>\.mavis\skills\
+
+# Opción 2: solo este proyecto — vive en el repo en .agent/skills/
+# (lo que ya tenés en D:\desarrollo\MdToPdf\.agent\skills\doc-orchestrator\)
 ```
+
+Recomendación: Opción 1 si querés invocar el skill desde otros proyectos.
+Opción 2 si lo estás desarrollando y vas a iterar.
 
 Requiere Windows x64. No necesita permisos de admin.
 
